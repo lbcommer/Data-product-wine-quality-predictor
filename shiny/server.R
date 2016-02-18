@@ -1,5 +1,6 @@
 library(shiny)
 library(caret)
+library(randomForest)
 
 modelRF <- readRDS("modelRF.rds")
 

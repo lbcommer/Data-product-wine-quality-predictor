@@ -24,8 +24,8 @@ ui <- navbarPage("Wine quality!",
                            "fixed.acidity: ",
                            min = 1,
                            max = 15,
-                           value = 7,
-                           step = 0.5
+                           value = 7.4,
+                           step = 0.1
                            )
         ),
         column(width = 3,
@@ -33,15 +33,15 @@ ui <- navbarPage("Wine quality!",
                            "volatile.acidity: ",
                            min = 0,
                            max = 3,
-                           value = 1,
-                           step = 0.1)
+                           value = 0.24,
+                           step = 0.01)
         ),
         column(width = 3,
                sliderInput("citric.acid",
                            "citric.acid: ",
                            min = 0,
                            max = 2,
-                           value = 0.5,
+                           value = 0.36,
                            step = 0.01)
         ),
         column(width = 3,
@@ -49,7 +49,7 @@ ui <- navbarPage("Wine quality!",
                            "residual.sugar: ",
                            min = 0,
                            max = 100,
-                           value = 7,
+                           value = 2,
                            step = 0.1)  
         )
     ),
@@ -59,7 +59,7 @@ ui <- navbarPage("Wine quality!",
                            "chlorides: ",
                            min = 0,
                            max = 0.5,
-                           value = 0.1,
+                           value = 0.031,
                            step = 0.01)
         ),
         column(width = 3,
@@ -67,7 +67,7 @@ ui <- navbarPage("Wine quality!",
                            "free.sulfur.dioxide: ",
                            min = 1,
                            max = 300,
-                           value = 35,
+                           value = 27,
                            step = 1)
         ),
         column(width = 3,
@@ -75,7 +75,7 @@ ui <- navbarPage("Wine quality!",
                            "total.sulfur.dioxide: ",
                            min = 1,
                            max = 500,
-                           value = 150,
+                           value = 139,
                            step = 1)
         ),
         column(width = 3,
@@ -83,8 +83,8 @@ ui <- navbarPage("Wine quality!",
                            "density: ",
                            min = 0.01,
                            max = 3,
-                           value = 1,
-                           step = 0.1)  
+                           value = 0.99,
+                           step = 0.01)  
         )
     ),
     fluidRow(
@@ -93,15 +93,15 @@ ui <- navbarPage("Wine quality!",
                            "pH: ",
                            min = 1,
                            max = 5,
-                           value = 3,
-                           step = 0.1)
+                           value = 3.28,
+                           step = 0.01)
         ),
         column(width = 3,
                sliderInput("sulphates",
                            "sulphates: ",
                            min = 0.1,
                            max = 2,
-                           value = 0.5,
+                           value = 0.48,
                            step = 0.01)
         ),
         column(width = 3,
@@ -109,7 +109,7 @@ ui <- navbarPage("Wine quality!",
                            "alcohol: ",
                            min = 5,
                            max = 20,
-                           value = 7,
+                           value = 12.5,
                            step = 0.5)
         )
     )
@@ -119,8 +119,9 @@ tabPanel("Help",fluidPage(titlePanel("Help"),
                               p("This app lets you to predice the quality of a wine through some properties."),
                           p("You can set the value of the known properties of the wine with the sliders at the bottom
                             and push the button 'Predict wine quality!'.
-                            A numeric prediction will be done: a number between 0 and 10. Bigger number
+                            A categorical prediction will be done: a level between 0 and 10. Bigger integer number
                             means better quality."),
+                          p("The more influential properties are alcohol and density."),
                           p("When the button is pressed the app execute a model prediction based on Random Forest.
                             The model is the result of the training with the dataset 'Wine Quality Data Set' from UCI: "),
                           a(href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality", target="_blank", "https://archive.ics.uci.edu/ml/datasets/Wine+Quality"),

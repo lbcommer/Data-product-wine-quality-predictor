@@ -126,6 +126,10 @@ tabPanel("Help",fluidPage(titlePanel("Help"),
                           a(href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality", target="_blank", "https://archive.ics.uci.edu/ml/datasets/Wine+Quality"),
                           p("The model was built offline, because it takes time, and saved as a RDS file."),
                           p("The prediction is done only when the button is pressed: changes in the sliders are ignored
-                            util button is pressed, but they update the left table to display the whole set of values")
+                            util button is pressed, but they update the left table to display the whole set of values"),
+                          br(),
+                          p("The code can be shown in github: "),
+                          a(href="https://github.com/lbcommer/Data-product-wine-quality-predictor.git", target="_blank", "https://github.com/lbcommer/Data-product-wine-quality-predictor.git")
+                          
                           )))
 )

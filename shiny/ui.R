@@ -130,7 +130,12 @@ tabPanel("Help",fluidPage(titlePanel("Help"),
                             util button is pressed, but they update the left table to display the whole set of values"),
                           br(),
                           p("The code can be shown in github: "),
-                          a(href="https://github.com/lbcommer/Data-product-wine-quality-predictor.git", target="_blank", "https://github.com/lbcommer/Data-product-wine-quality-predictor.git")
+                          a(href="https://github.com/lbcommer/Data-product-wine-quality-predictor.git", target="_blank", "https://github.com/lbcommer/Data-product-wine-quality-predictor.git"),
+                          br(),
+                          br(),
+                          p("A presentation about this app can be found here: "),
+                          a(href="http://rpubs.com/lbcommer/wine-predictor", target="_blank", "http://rpubs.com/lbcommer/wine-predictor")
+                          
                           
                           )))
 )
